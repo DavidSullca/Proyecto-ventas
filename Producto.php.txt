@@ -1,0 +1,15 @@
+/*
+ *@Entity
+*/
+Class Producto{
+  /*
+   *@id
+   *@Column(type = "integer")
+   *@GeneratedValue
+   */
+     $id;
+ /*@Column(type = "string",length = "255")*/
+    $descripcion;
+ /*@Column(typr = "float")
+    $precio
+}

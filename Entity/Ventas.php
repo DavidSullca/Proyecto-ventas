@@ -1,0 +1,85 @@
+<?php
+namespace Entity;
+/**
+ * @Entity 
+ **/
+class Ventas{
+	/**
+	 *	@var int 
+	 *
+	 * @Id
+	 * @Column(type="integer")
+	 * @GeneratedValue
+	 * */
+	private $Id;
+
+	/**
+	 * @var string
+	 * @Column(length=140,name="text_large")
+	 */
+	private $IdComida;
+
+	/**
+	 * @var string
+	 * @Column(length=140)
+	 */
+	private $IdUsuario;
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->Id;
+    }
+
+    /**
+     * Set idComida.
+     *
+     * @param string $idComida
+     *
+     * @return Ventas
+     */
+    public function setIdComida($idComida)
+    {
+        $this->IdComida = $idComida;
+
+        return $this;
+    }
+
+    /**
+     * Get idComida.
+     *
+     * @return string
+     */
+    public function getIdComida()
+    {
+        return $this->IdComida;
+    }
+
+    /**
+     * Set idUsuario.
+     *
+     * @param string $idUsuario
+     *
+     * @return Ventas
+     */
+    public function setIdUsuario($idUsuario)
+    {
+        $this->IdUsuario = $idUsuario;
+
+        return $this;
+    }
+
+    /**
+     * Get idUsuario.
+     *
+     * @return string
+     */
+    public function getIdUsuario()
+    {
+        return $this->IdUsuario;
+    }
+}

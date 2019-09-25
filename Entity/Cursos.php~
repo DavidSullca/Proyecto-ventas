@@ -1,0 +1,116 @@
+<?php
+namespace Entity;
+/**
+ * @Entity 
+ **/
+class Cursos{
+	/**
+	 *	@var int 
+	 *
+	 * @Id
+	 * @Column(type="integer")
+	 * @GeneratedValue
+	 * */
+	private $Id;
+
+	/**
+	 * @var string
+	 * @Column(length=140,name="NombreDelCurso")
+	 */
+	private $Nombre;
+
+	/**
+	 * @var string
+	 * @Column(length=140)
+	 */
+	private $Anio;
+
+    /**
+    * @OneToMany(targetEntity="Usuarios",mappedBy="curso")
+    *
+    */
+    private $usuarios;
+
+////////////////////////////////////////////////////////
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->Id;
+    }
+
+    /**
+     * Set nombre.
+     *
+     * @param string $nombre
+     *
+     * @return Cursos
+     */
+    public function setNombre($nombre)
+    {
+        $this->Nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre.
+     *
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->Nombre;
+    }
+
+    /**
+     * Set año.
+     *
+     * @param string $año
+     *
+     * @return Cursos
+     */
+    public function setAño($año)
+    {
+        $this->Año = $año;
+
+        return $this;
+    }
+
+    /**
+     * Get año.
+     *
+     * @return string
+     */
+    public function getAño()
+    {
+        return $this->Año;
+    }
+
+    /**
+     * Set anio.
+     *
+     * @param string $anio
+     *
+     * @return Cursos
+     */
+    public function setAnio($anio)
+    {
+        $this->Anio = $anio;
+
+        return $this;
+    }
+
+    /**
+     * Get anio.
+     *
+     * @return string
+     */
+    public function getAnio()
+    {
+        return $this->Anio;
+    }
+}

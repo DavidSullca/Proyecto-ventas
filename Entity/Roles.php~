@@ -1,0 +1,46 @@
+<?php
+namespace Entity;
+/**
+ * @Entity
+ **/
+class Roles{
+	/**
+	 *	@var int 
+	 *
+	 * @Id
+	 * @Column(type="integer")
+	 * @GeneratedValue
+	 * */
+	private $Id;
+
+	/**
+	 * @var string
+	 * @Column(length=140)
+	 */
+	private $Roles;
+
+    /**
+     * Set roles;.
+     *
+     * @param string $roles;
+     *
+     * @return Clientes
+     */
+    public function setRoles($roles)
+    {
+        $this->Roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Get roles;.
+     *
+     * @return string
+     */
+    public function getRoles()
+    {
+        return $this->Roles;
+    }
+}
+    
